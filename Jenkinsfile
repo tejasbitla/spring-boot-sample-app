@@ -216,7 +216,8 @@ pipeline {
         // Always runs. And it runs before any of the other post conditions.
         always {
             // Let's wipe out the workspace before we finish!
-            deleteDir()
+           // deleteDir()
+           echo "delete directory"
         }
         success {
             //sendEmail("Successful");
