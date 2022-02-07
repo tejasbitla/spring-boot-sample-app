@@ -1,40 +1,6 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@crazy4devops 
- The password you provided is in a list of passwords commonly used on other websites. To increase your security, you must update your password. After March 1, 2022 we will automatically reset your password. Change your password on the settings page.
-
-Read our documentation on safer password practices.
-
-crazy4devops
-/
-spring-boot-sample-app
-Public
-forked from Romeh/spring-boot-sample-app
-Code
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-spring-boot-sample-app/Jenkinsfile
-@Romeh
-Romeh Updating to latest spring boot 2 with latest spring cloud version , l…
-…
-Latest commit 8308dfe on 19 Nov 2018
- History
- 1 contributor
-327 lines (308 sloc)  13.6 KB
-   
 pipeline {
     // run on jenkins nodes tha has java 8 label
-    agent { label 'java8' }
+    agent any
     // global env variables
     environment {
         EMAIL_RECIPIENTS = 'mahmoud.romeh@test.com'
