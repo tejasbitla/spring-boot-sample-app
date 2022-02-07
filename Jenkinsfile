@@ -15,7 +15,7 @@ pipeline {
                     // ** NOTE: This 'M3' Maven tool must be configured
                     // **       in the global configuration.
                     echo 'Pulling...' + env.GIT_BRANCH
-                    def mvnHome = tool 'maven-3.8.4'
+                    def mvnHome = tool 'Maven 3.5.2'
                     if (isUnix()) {
                         def targetVersion = getDevVersion()
                         print 'target build version...'
@@ -60,7 +60,7 @@ pipeline {
             // Run the sonar scan
             steps {
                 script {
-                    def mvnHome = tool 'maven-3.8.4'
+                    def mvnHome = tool 'Maven 3.5.2'
                     withSonarQubeEnv {
 
                         sh "'${mvnHome}/bin/mvn'  verify sonar:sonar -Dintegration-tests.skip=true -Dmaven.test.failure.ignore=true"
