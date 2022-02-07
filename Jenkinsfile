@@ -219,13 +219,16 @@ pipeline {
             deleteDir()
         }
         success {
-            sendEmail("Successful");
+            //sendEmail("Successful");
+            echo "successfull"
         }
         unstable {
-            sendEmail("Unstable");
+            //sendEmail("Unstable");
+            echo "unstable"
         }
         failure {
-            sendEmail("Failed");
+            //sendEmail("Failed");
+            echo "failed"
         }
     }
 
